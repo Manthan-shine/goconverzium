@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoConverzium Clone</title>
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link href="assets/css/aos.css" rel="stylesheet">
+    <script src="assets/js/aos.js"></script>
+</head>
+
+<body>
+    <!-- ==================== Start Loading ==================== -->
+
+    <div class="loader-wrap">
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+            <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+        </svg>
+
+        <div class="loader-wrap-heading">
+            <div class="load-text">
+                <span>L</span>
+                <span>o</span>
+                <span>a</span>
+                <span>d</span>
+                <span>i</span>
+                <span>n</span>
+                <span>g</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== End Loading ==================== -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg container start-50 translate-middle-x " data-aos="zoom-in-down"
+        data-aos-easing="linear" data-aos-duration="1500" data-aos-once="true" data-aos-offset="0">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a class="navbar-brand text-white" href="index.html">
+                <img src="assets/img/logo.png" alt="logo" width="165">
+            </a>
+
+            <!-- Toggle Button (Opens Offcanvas on Mobile) -->
+            <button class="navbar-toggler bg-black shadow-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Normal Desktop Nav -->
+            <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="productsDropdown">
+                            <li><a class="dropdown-item" href="#">Product 1</a></li>
+                            <li><a class="dropdown-item" href="#">Product 2</a></li>
+                            <li><a class="dropdown-item" href="#">Product 3</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">All Products</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+                </ul>
+            </div>
+
+            <!-- Sign In (Desktop Always Visible) -->
+            <a href="#" class="signin-pill d-none d-lg-inline-block">Sign In</a>
+        </div>
+    </nav>
+
+    <!-- Offcanvas Menu for Mobile -->
+    <div class="offcanvas offcanvas-end bg-dark text-white" data-bs-scroll="true" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title"> <a class="navbar-brand text-white" href="#">
+                    <img src="assets/img/logo.png" alt="logo" width="165">
+                </a></h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body ps-4 pt-0">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="offcanvasProductsDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Products
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="offcanvasProductsDropdown">
+                        <li><a class="dropdown-item" href="#">Product 1</a></li>
+                        <li><a class="dropdown-item" href="#">Product 2</a></li>
+                        <li><a class="dropdown-item" href="#">Product 3</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">All Products</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+            </ul>
+            <div class="mt-3">
+                <a href="#" class="signin-pill">Sign In</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="btn-box mb-4" data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+                <button class="custom-btn">
+                    <img src="assets/img/party-popper.svg" alt="icon">
+                    AI Models for Every Business Need
+                </button>
+            </div>
+
+            <div class="position-relative" data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-duration="500"
+                data-aos-delay="400">
+                <h1 class="position-relative z-2">Create Custom AI Models <br>for Your Website</h1>
+                <img src="assets/img/pattern.svg" alt="pattern"
+                    class="position-absolute top-0 mt-5 pt-4 w-100 z-0 start-50 translate-middle-x">
+            </div>
+            <p data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="700">
+                Train your AI Assistant using your own content and instantly add it to your website.<br> Automate lead
+                generation, support, and customer engagement with ease.
+            </p>
+            <span class="highlight" data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-duration="500"
+                data-aos-delay="1200">5min every setup time</span>
+            <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap" data-aos="zoom-in-up"
+                data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="900">
+                <a href="#" class="btn-primary d-flex align-items-center gap-3"><img src="assets/img/arrow-left-btn.svg"
+                        alt="arrow-left-btn" class="img-fluid" width="32">Get Started Free</a>
+                <a href="#" class="btn-dark d-flex align-items-center justify-content-center">Book a Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section text-end" data-aos="fade-up" data-aos-offset="500" data-aos-duration="600"
+        data-aos-easing="linear">
+        <div class="d-inline-block mb-3 position-relative powered-box">
+            <img src="assets/img/arrow-down-vector.svg" alt="arrow-down-vector">
+            <span class="powered">Powered by GoConverzium</span>
+        </div>
+
+
+        <div class="video-wrapper">
+            <div class="thumbnail">
+                <img src="assets/img/Video-thumbnail.png" alt="Demo Video Thumbnail" class="video-thumbnail">
+                <div class="play-button"></div>
+            </div>
+        </div>
+
+
+
+    </section>
+    <section class="features-section py-5 text-center">
+        <div class="container-fluid px-md-5 px-2">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <h2 class="mb-3" data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-duration="500"
+                        data-aos-delay="400" data-aos-offset="400">Your Website is Getting Traffic. But It’s Not
+                        Conversations.</h2>
+                    <p class="mb-5" data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-duration="500"
+                        data-aos-delay="500" data-aos-offset="400">
+                        “Visitors leave when they can’t find quick answers. Your team is busy or offline.
+                        And forms? They rarely get filled. GoConverzium changes that.”
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card  h-100" data-aos="zoom-in" data-aos-easing="ease-in-out"
+                        data-aos-duration="500" data-aos-delay="400" data-aos-offset="400">
+                        <div class="icon mb-3">
+                            <img src="assets/img/features-icon-1.svg" alt="features-icon-1">
+                        </div>
+                        <h5>Answers Instantly</h5>
+                        <p class=" mb-0">No wait time, ever</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card  h-100" data-aos="zoom-in" data-aos-easing="ease-in-out"
+                        data-aos-duration="500" data-aos-delay="500" data-aos-offset="400">
+                        <div class="icon mb-3">
+                            <img src="assets/img/features-icon-2.svg" alt="features-icon-2">
+                        </div>
+                        <h5>Trained on your Data</h5>
+                        <p class=" mb-0">Feels like a real team member</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card  h-100" data-aos="zoom-in" data-aos-easing="ease-in-out"
+                        data-aos-duration="500" data-aos-delay="600" data-aos-offset="400">
+                        <div class="icon mb-3">
+                            <img src="assets/img/features-icon-3.svg" alt="features-icon-3">
+                        </div>
+                        <h5>Captures & Qualifies Leads</h5>
+                        <p class=" mb-0">Engage hot prospects</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card  h-100" data-aos="zoom-in" data-aos-easing="ease-in-out"
+                        data-aos-duration="500" data-aos-delay="700" data-aos-offset="400">
+                        <div class="icon mb-3">
+                            <img src="assets/img/features-icon-4.svg" alt="features-icon-4">
+                        </div>
+                        <h5>Simple Setup</h5>
+                        <p class=" mb-0">Launch in minutes, no devs required</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="steps-section" data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-duration="800"
+        data-aos-delay="400" data-aos-offset="400">
+        <div class="text-center mb-4 position-relative step-heading-content" data-aos="zoom-in-up"
+            data-aos-easing="ease-in-out" data-aos-duration="800" data-aos-delay="600" data-aos-offset="400">
+            <p class="text-uppercase  small mb-2 d-inline-block position-relative">
+                Steps
+            </p>
+        </div>
+
+        <h2 data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="600"
+            data-aos-offset="400">Go live in Just 3 Simple Steps</h2>
+        <p class="lead" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="500" data-aos-delay="600"
+            data-aos-offset="500">No coding, no complexity — just a fast, guided setup. <br>From training your AI to
+            going live,
+            it takes under 5 minutes.</p>
+
+        <div class="row g-4">
+            <!-- Step 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="step-card" data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="600"
+                    data-aos-delay="400" data-aos-offset="600">
+                    <img src="assets/img/step-1-img.png" alt="Step 1">
+                    <h5 class="step-title">Upload Content</h5>
+                    <p class="step-desc">Train your AI Assistant using website links, documents, FAQs, or knowledge
+                        base.</p>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="step-card" data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="600"
+                    data-aos-delay="500" data-aos-offset="600">
+                    <img src="assets/img/step-2-img.png" alt="Step 2">
+                    <h5 class="step-title">Customize Tone & Flow</h5>
+                    <p class="step-desc">Choose how it speaks, what it prioritizes, and how it handles leads.</p>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="col-lg-4 col-md-6 mx-auto">
+                <div class="step-card" data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="600"
+                    data-aos-delay="600" data-aos-offset="600">
+                    <img src="assets/img/step-3-img.png" alt="Step 3">
+                    <h5 class="step-title">Embed & Launch</h5>
+                    <p class="step-desc">Publish your AI Assistant with just a few clicks — no tech skills needed.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center flex-wrap gap-3 mt-4" data-aos="zoom-in-up"
+            data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="700">
+            <a href="#" class="btn-primary d-flex align-items-center gap-3"><img src="assets/img/arrow-left-btn.svg"
+                    alt="arrow-left-btn" class="img-fluid" width="32">Get Started Free</a>
+            <a href="#" class="btn-dark d-flex align-items-center justify-content-center text-black border-dark">Book a
+                Demo</a>
+        </div>
+    </section>
+
+
+
+
+    <section class="pricing-section text-center">
+        <div class="text-center mb-4 position-relative step-heading-content" data-aos="zoom-in-up"
+            data-aos-easing="ease-in-out" data-aos-duration="800" data-aos-delay="400" data-aos-offset="400">
+            <p class="text-uppercase text-white  small mb-2 d-inline-block position-relative">
+                Pricing
+            </p>
+        </div>
+        <h2 class="fw-bold" data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-duration="500"
+            data-aos-delay="600" data-aos-offset="400">Simple, transparent pricing</h2>
+        <p data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="500" data-aos-delay="500"
+            data-aos-offset="400">Choose the plan that fits your needs. All plans include a 10-day free trial with no
+            setup
+            fees.</p>
+
+        <!-- Toggle -->
+        <div class="toggle-btn my-4 mx-auto" data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-duration="500"
+            data-aos-delay="700" data-aos-offset="400">
+            <button id="yearlyBtn" class="active">Yearly <span class="save-badge">Save 23%</span></button>
+            <button id="monthlyBtn">Monthly</button>
+        </div>
+
+        <!-- Cards -->
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="pricing-card-outer-box" data-aos="zoom-in" data-aos-easing="ease-in-out"
+                        data-aos-duration="600" data-aos-delay="400" data-aos-offset="600">
+                        <div class="pricing-card h-100 text-start">
+                            <h6>Basic</h6>
+                            <h2 id="basic-price">$15<sup class="fs-6 fw-normal">/month</sup></h2>
+                            <p>Perfect for individuals and small projects. Start with a 10-day free trial!</p>
+                            <button class="subscribe-btn ">Subscribe</button>
+                            <hr class="my-4">
+                            <ul class="list-unstyled d-flex flex-column gap-3">
+                                <li><i class="fa-solid fa-check check-icon"></i> 1 AI model</li>
+                                <li><i class="fa-solid fa-check check-icon"></i> 250 conversations/month</li>
+                                <li><i class="fa-solid fa-check check-icon"></i> 250 API calls/Month</li>
+                                <li><i class="fa-solid fa-check check-icon"></i> Iframe integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="pricing-card-outer-box" data-aos="zoom-in" data-aos-easing="ease-in-out"
+                        data-aos-duration="600" data-aos-delay="500" data-aos-offset="600">
+                        <div class="pricing-card h-100 text-start">
+                            <h6>Starter</h6>
+                            <h2 id="starter-price">$29<sup class="fs-6 fw-normal">/month</sup></h2>
+                            <p>Perfect for small businesses and personal projects. Start with a 10-day free trial!</p>
+                            <button class="subscribe-btn ">Subscribe</button>
+                            <hr class="my-4">
+                            <ul class="list-unstyled d-flex flex-column gap-3">
+                                <li><i class="fa-solid fa-check check-icon"></i> 3 AI model</li>
+                                <li><i class="fa-solid fa-check check-icon"></i> 1,000 conversations/month</li>
+                                <li><i class="fa-solid fa-check check-icon"></i> 1,000 API calls/month</li>
+                                <li><i class="fa-solid fa-check check-icon"></i> Email support</li>
+                                <li><i class="fa-solid fa-check check-icon"></i> Iframe integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="pricing-card-outer-box" data-aos="zoom-in" data-aos-easing="ease-in-out"
+                        data-aos-duration="600" data-aos-delay="600" data-aos-offset="600">
+                        <div class="pricing-card h-100 text-start">
+                            <h6>Professional</h6>
+                            <h2 id="pro-price">$99<sup class="fs-6 fw-normal">/month</sup></h2>
+                            <p>Ideal for growing businesses and marketing teams. Starts with a 10-day free trial!</p>
+                            <button class="subscribe-btn primary">Subscribe</button>
+                            <hr class="my-4">
+                            <ul class="list-unstyled d-flex flex-column gap-3">
+                                <li><i class="fa-solid fa-check check-icon"></i> 15 AI model</li>
+                                <li><i class="fa-solid fa-check check-icon"></i> 5,000 conversations/month</li>
+                                <li><i class="fa-solid fa-check check-icon"></i> 5,000 API calls/month</li>
+                                <li><i class="fa-solid fa-check check-icon"></i> Priority support</li>
+                                <li><i class="fa-solid fa-check check-icon"></i> Iframe integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="pricing-card-outer-box" data-aos="zoom-in" data-aos-easing="ease-in-out"
+                        data-aos-duration="600" data-aos-delay="700" data-aos-offset="600">
+                        <div class="pricing-card h-100 text-start">
+                            <h6>Enterpise</h6>
+                            <h2 id="enterprise-price">$299<sup class="fs-6 fw-normal">/month</sup></h2>
+                            <p>For large organizations with advanced needs. Starts with a 10-day free trial!</p>
+                            <button class="subscribe-btn ">Subscribe</button>
+                            <hr class="my-4">
+                            <ul class="list-unstyled d-flex flex-column gap-3">
+                                <li><i class="fa-solid fa-check check-icon"></i> 1 AI model</li>
+                                <li><i class="fa-solid fa-check check-icon"></i> 250 conversations/month</li>
+                                <li><i class="fa-solid fa-check check-icon"></i> 250 API calls/month</li>
+                                <li><i class="fa-solid fa-check check-icon"></i> Dedicated support</li>
+                                <li><i class="fa-solid fa-check check-icon"></i> Iframe integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 integration-section">
+        <div class="text-center mb-5 position-relative step-heading-content" data-aos="zoom-in-up"
+            data-aos-easing="ease-in-out" data-aos-duration="800" data-aos-delay="400" data-aos-offset="400">
+            <p class="text-uppercase   small mb-2 d-inline-block position-relative">
+                Integration
+            </p>
+            <h2>Build to Turn Conversations Into Conversions</h2>
+        </div>
+
+        <div class="container">
+            <div class="row gy-4 justify-content-center">
+                <div class="col-md-4 col-sm-6">
+                    <div data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="400"
+                        data-aos-offset="400">
+                        <div class="integration-card">
+                            <img src="assets/img/ai-assistant-icon.png" width="86" alt="ai-assistant-icon">
+                        </div>
+                        <div class="py-4">
+                            <h5 class="integration-title">Smart, Human-like AI Assistant</h5>
+                            <p class="integration-text">Understands context, asks follow-ups, handles Objections</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="500"
+                        data-aos-offset="400">
+                        <div class="integration-card">
+                            <img src="assets/img/conversation-analytics-icon.svg" alt="conversation-analytics-icon">
+                        </div>
+                        <div class="py-4">
+                            <h5 class="integration-title ">Conversation Analytics</h5>
+                            <p class="integration-text">See what’s working. Optimize what’s not.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="600"
+                        data-aos-offset="400">
+                        <div class="integration-card">
+                            <img src="assets/img/conversation-analytics-icon.svg" alt="conversation-analytics-icon">
+                        </div>
+                        <div class="py-4">
+                            <h5 class="integration-title ">No-code + API Friendly</h5>
+                            <p class="integration-text">Add to any site. Connect with tools, Hubspot, Slack or CRM.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="700"
+                        data-aos-offset="400">
+                        <div class="integration-card">
+                            <img src="assets/img/conversation-analytics-icon.svg" alt="conversation-analytics-icon">
+                        </div>
+                        <div class="py-4">
+                            <h5 class="integration-title ">Private & Secure</h5>
+                            <p class="integration-text">Enterprise-grade encryption, GDPR-ready</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="800"
+                        data-aos-offset="400">
+                        <div class="integration-card">
+                            <img src="assets/img/conversation-analytics-icon.svg" alt="conversation-analytics-icon">
+                        </div>
+                        <div class="py-4">
+                            <h5 class="integration-title ">Always Available</h5>
+                            <p class="integration-text">Your assistant never sleeps—or forgets to follow up</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Integration Section -->
+    <section class="integration-power-boost-section pt-5">
+        <div class="container px-0">
+            <div class="row">
+                <!-- Left Content -->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="position-relative integration-heading-content" data-aos="fade-right"
+                        data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="800"
+                        data-aos-offset="400">
+                        <p class="text-uppercase small mb-2 d-inline-block position-relative">
+                            Integration
+                        </p>
+                        <h2>Power to Boost Engagement and Conversion</h2>
+                    </div>
+                    <p class="mb-4 integration-para" data-aos="fade-right" data-aos-easing="ease-in-out"
+                        data-aos-duration="500" data-aos-delay="700" data-aos-offset="350">
+                        Engage visitors with smart, human-like conversations that convert.
+                        Cut response time, boost demo bookings, and capture more leads effortlessly.
+                    </p>
+
+
+                    <a href="#" class="get-start-btn btn" data-aos="fade-right" data-aos-easing="ease-in-out"
+                        data-aos-duration="500" data-aos-delay="800" data-aos-offset="350">Get Started Free</a>
+                </div>
+
+                <!-- Right Features -->
+                <div class="col-lg-6">
+                    <div class="integration-power-boost-card px-0" data-aos="zoom-in-up" data-aos-easing="ease-in-out"
+                        data-aos-duration="800" data-aos-delay="400" data-aos-offset="400">
+                        <div class="d-flex flex-column flex-column-reverse flex-md-row gap-3 justify-content-between p-4"
+                            data-aos="fade-left" data-aos-easing="ease-in-out" data-aos-duration="500"
+                            data-aos-delay="900" data-aos-offset="400">
+                            <div>
+                                <h6 class="fw-bold">3x more leads captured</h6>
+                                <p class="mb-0">Convert visitors into leads with AI that never sleeps.<br> Experience 3x
+                                    more engagement, instantly.</p>
+                            </div>
+                            <img src="assets/img//boost-icon-1.svg" width="80" alt="boost-icon-1">
+                        </div>
+                        <hr class="border-dark">
+
+                        <div class="d-flex flex-column flex-column-reverse flex-md-row gap-3 justify-content-between p-4"
+                            data-aos="fade-left" data-aos-easing="ease-in-out" data-aos-duration="500"
+                            data-aos-delay="1000" data-aos-offset="400">
+                            <div>
+                                <h6 class="fw-bold">80% drop in response time</h6>
+                                <p class="mb-0">Respond faster than ever — automatically. <br>Cut delays and close deals
+                                    quicker.</p>
+                            </div>
+                            <img src="assets/img/boost-icon-2.svg" width="80" alt="boost-icon-2">
+                        </div>
+
+                        <hr class="border-dark">
+                        <div class="d-flex flex-column flex-column-reverse flex-md-row gap-3 justify-content-between p-4"
+                            data-aos="fade-left" data-aos-easing="ease-in-out" data-aos-duration="500"
+                            data-aos-delay="1100" data-aos-offset="400">
+                            <div>
+                                <h6 class="fw-bold">40% improvement in demo bookings</h6>
+                                <p class="mb-0">AI handles the first touch instantly. <br>That’s how you reduce response
+                                    time by 80%.</p>
+                            </div>
+                            <img src="assets/img/boost-icon-3.svg" width="80" alt="boost-icon-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="border-top"></div>
+    <!-- Testimonial Section -->
+    <section class="testimonial-section py-5">
+        <div class="container-fluid px-md-5 px-2">
+
+            <div class="text-center mb-3 step-heading-content" data-aos="zoom-in-up" data-aos-easing="ease-in-out"
+                data-aos-duration="800" data-aos-delay="400" data-aos-offset="400">
+                <p class="text-uppercase text-muted small mb-2">Testimonial</p>
+            </div>
+            <div class="text-center testimonial-heading-content px-md-5" data-aos="zoom-in-up"
+                data-aos-easing="ease-in-out" data-aos-duration="800" data-aos-delay="700" data-aos-offset="400">
+                <h2>Businesses of all sizes trust their AI Assistant to Converzium</h2>
+                <p>From SaaS startups to growing e-commerce brands and education platforms—see how
+                    Converzium is transforming customer engagement across industries.</p>
+            </div>
+
+            <!-- Swiper Slider -->
+            <div class="testimonial-swiper-wrapper position-relative" data-aos="zoom-in-up"
+                data-aos-easing="ease-in-out" data-aos-duration="800" data-aos-delay="400" data-aos-offset="400">
+                <div class="swiper testimonial-swiper text-black">
+                    <div class="swiper-wrapper py-2">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card d-flex flex-column">
+                                <div class="mb-4">
+                                    <img src="assets/img/quote-icon.svg" alt="quote-icon">
+                                </div>
+                                <p class="testimonial-text">
+                                    "Within the first week of using Converzium, our AI Assistant was handling 85% of
+                                    customer
+                                    questions—and doing it better than any support script we’ve used before. Our team
+                                    now
+                                    focuses more on closing deals than chasing repetitive queries."
+                                </p>
+                                <div class="mt-auto d-flex user-details align-items-center justify-content-between">
+                                    <div>
+                                        <h6>Priya Sharma</h6>
+                                        <h3 class="mb-2">Founder, Trend Verse Apparel</h3>
+                                        <small>SaaS/ B2B Software</small>
+                                    </div>
+                                    <img src="assets/img/user-1.png" alt="user-1" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card d-flex flex-column">
+                                <div class="mb-4">
+                                    <img src="assets/img/quote-icon.svg" alt="quote-icon">
+                                </div>
+                                <p class="testimonial-text">
+                                    "We added Converzium to our product pages and immediately saw a 27% uplift in
+                                    add-to-carts. The AI Assistant answers sizing, shipping, and return policy questions
+                                    in
+                                    real-time — which means fewer doubts and more confident buyers."
+                                </p>
+                                <div class="mt-auto d-flex user-details align-items-center justify-content-between">
+                                    <div>
+                                        <h6>Ankit Sharma</h6>
+                                        <h3 class="mb-2">Founder, Trend Verse Apparel</h3>
+                                        <small>E-commerce/ Fashion Retail</small>
+                                    </div>
+                                    <img src="assets/img/user-2.png" alt="user-2" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card d-flex flex-column">
+                                <div class="mb-4">
+                                    <img src="assets/img/quote-icon.svg" alt="quote-icon">
+                                </div>
+                                <p class="testimonial-text">
+                                    "As an online learning platform, we get a ton of repetitive questions from students
+                                    and
+                                    parents. Converzium’s AI Assistant now handles those 24/7 — freeing up our support
+                                    team
+                                    and improving the onboarding experience."
+                                </p>
+                                <div class="mt-auto d-flex user-details align-items-center justify-content-between">
+                                    <div>
+                                        <h6>Priya Sharma</h6>
+                                        <h3 class="mb-2">Operations Manager, LearnCraft</h3>
+                                        <small>EdTech / Online Learning</small>
+                                    </div>
+                                    <img src="assets/img/user-1.png" alt="user-1" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card d-flex flex-column">
+                                <div class="mb-4">
+                                    <img src="assets/img/quote-icon.svg" alt="quote-icon">
+                                </div>
+                                <p class="testimonial-text">
+                                    "Within the first week of using Converzium, our AI Assistant was handling 85% of
+                                    customer
+                                    questions—and doing it better than any support script we’ve used before. Our team
+                                    now
+                                    focuses more on closing deals than chasing repetitive queries."
+                                </p>
+                                <div class="mt-auto d-flex user-details align-items-center justify-content-between">
+                                    <div>
+                                        <h6>Priya Sharma</h6>
+                                        <h3 class="mb-2">Founder, Trend Verse Apparel</h3>
+                                        <small>SaaS/ B2B Software</small>
+                                    </div>
+                                    <img src="assets/img/user-2.png" alt="user-2" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+                </class=>
+            </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5  text-white">
+        <div class="container-fluid px-md-5 px-2">
+            <div class="row g-4 align-items-start justify-content-between">
+                <!-- Left Column -->
+                <div class="col-lg-5">
+                    <div class="position-relative integration-heading-content" data-aos="fade-right"
+                        data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="800"
+                        data-aos-offset="300">
+                        <p class="text-uppercase small text-white mb-2 d-inline-block position-relative">
+                            FAQ
+                        </p>
+                    </div>
+                    <div class="faq-heading-content" data-aos="fade-right" data-aos-easing="ease-in-out"
+                        data-aos-duration="500" data-aos-delay="500" data-aos-offset="300">
+                        <h2>Got Questions? We’ve Got Answers</h2>
+                        <p class="text-white">Find answers to your most common questions.</p>
+                    </div>
+
+                </div>
+
+                <!-- Right Column -->
+                <div class="col-lg-6">
+                    <div class="accordion" id="faqAccordion">
+                        <!-- Item 1 -->
+                        <div class="accordion-item  border-black border rounded mb-3" data-aos="fade-left"
+                            data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="500"
+                            data-aos-offset="300">
+                            <h2 class="accordion-header ">
+                                <button class="accordion-button  text-white " type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1" aria-expanded="true">
+                                    Do I need coding skills to set this up?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, our AI assistant can integrate seamlessly with your existing CRM and WhatsApp.
+                                    With its no-code and API-friendly setup, you can easily connect it to popular CRMs
+                                    like
+                                    HubSpot, Salesforce, while keeping all interactions synced with your CRM.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="accordion-item  border rounded mb-3" data-aos="fade-left"
+                            data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="600"
+                            data-aos-offset="300">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed text-white " type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    How does the AI Assistant get trained?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Your training answer here...</div>
+                            </div>
+                        </div>
+                        <!-- Repeat more items -->
+                        <div class="accordion-item  border rounded mb-3" data-aos="fade-left"
+                            data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="700"
+                            data-aos-offset="300">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed text-white " type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Can it work with my CRM or WhatsApp?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Your CRM/WhatsApp answer here...</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item  border rounded mb-3" data-aos="fade-left"
+                            data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="800"
+                            data-aos-offset="300">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed text-white " type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Is my data secure?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Data security answer here...</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item  border rounded" data-aos="fade-left" data-aos-easing="ease-in-out"
+                            data-aos-duration="500" data-aos-delay="900" data-aos-offset="300">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed text-white " type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    What happens after the trial?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Trial information answer here...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer text-white pt-5">
+        <div class="container-fluid px-md-5 px-2">
+            <div class="g-4 g-md-5 row">
+                <!-- Column 1 -->
+                <div class="col-md-4">
+                    <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600" data-aos-delay="400">
+                        <img src="assets/img/logo.png" alt="Logo" width="165" class="img-fluid">
+                    </div>
+                    <p class="text-white py-4 m-0" data-aos="fade-right" data-aos-easing="linear"
+                        data-aos-duration="600" data-aos-delay="600">AI assistant for lead capture, qualification, and
+                        real-time
+                        conversation.</p>
+                    <form class="d-flex form-box p-2" data-aos="fade-right" data-aos-easing="linear"
+                        data-aos-duration="600" data-aos-delay="700">
+                        <input type="email"
+                            class="form-control p-0 px-3 border-0 shadow-none bg-transparent  text-white"
+                            placeholder="Enter your email address">
+                        <div class="submit-icon"><i class="fa-solid fa-paper-plane"></i></div>
+                    </form>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="col-md-2" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="600"
+                    data-aos-delay="400">
+                    <h6>Explore</h6>
+                    <ul class="list-unstyled lh-lg">
+                        <li><a href="#" class=" text-decoration-none">Resources</a></li>
+                        <li><a href="#" class=" text-decoration-none">Blog</a></li>
+                        <li><a href="#" class=" text-decoration-none">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="col-md-2" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="600"
+                    data-aos-delay="500">
+                    <h6>Menu</h6>
+                    <ul class="list-unstyled lh-lg">
+                        <li><a href="#" class="text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-decoration-none">About Us</a></li>
+                        <li><a href="#" class="text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="col-md-4" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="600"
+                    data-aos-delay="600">
+                    <h6>Office Location</h6>
+                    <p>Address Line Lorem Ipsum Dolore Sit Amet</p>
+                </div>
+            </div>
+
+            <div class="align-items-center d-flex flex-column flex-md-row gap-3 justify-content-between py-4">
+                <div class="mt-3 mt-md-0">
+                    <a href="#" class="me-3 text-decoration-none text-white">Terms</a>
+                    <a href="#" class="me-3 text-decoration-none text-white">Privacy</a>
+                    <a href="#" class="text-decoration-none text-white">Cookies</a>
+                </div>
+                <div class="small">© 2025 By GoConverzium. All Rights Reserved.</div>
+
+                <ul class="d-flex align-items-center justify-content-between gap-3 social-icons m-0 list-unstyled">
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script>
+        document.querySelector(".video-wrapper").addEventListener("click", function () {
+            this.innerHTML = `<iframe width="100%"  height="676"
+      src="https://www.youtube.com/embed/Nd27wjjPzv0?autoplay=1"
+      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>`;
+        });
+
+
+        // price toggle
+
+        const yearlyBtn = document.getElementById("yearlyBtn");
+        const monthlyBtn = document.getElementById("monthlyBtn");
+
+        const prices = {
+            monthly: { basic: 15, starter: 29, pro: 99, enterprise: 299 },
+            yearly: { basic: 12, starter: 23, pro: 76, enterprise: 230 } // discounted 23%
+        };
+
+        function updatePrices(type) {
+            document.getElementById("basic-price").innerHTML = `$${prices[type].basic}<sup class="fs-6 fw-normal">/month</sup>`;
+            document.getElementById("starter-price").innerHTML = `$${prices[type].starter}<sup class="fs-6 fw-normal">/month</sup>`;
+            document.getElementById("pro-price").innerHTML = `$${prices[type].pro}<sup class="fs-6 fw-normal">/month</sup>`;
+            document.getElementById("enterprise-price").innerHTML = `$${prices[type].enterprise}<sup class="fs-6 fw-normal">/month</sup>`;
+        }
+
+        yearlyBtn.addEventListener("click", () => {
+            yearlyBtn.classList.add("active");
+            monthlyBtn.classList.remove("active");
+            updatePrices("yearly");
+        });
+
+        monthlyBtn.addEventListener("click", () => {
+            monthlyBtn.classList.add("active");
+            yearlyBtn.classList.remove("active");
+            updatePrices("monthly");
+        });
+
+        // default yearly
+        updatePrices("yearly");
+
+
+
+
+        // Swiper JS 
+
+        document.addEventListener('DOMContentLoaded', function () {
+            new Swiper('.testimonial-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                pagination: { el: '.swiper-pagination', clickable: true },
+                breakpoints: {
+                    768: { slidesPerView: 2 },
+                    992: { slidesPerView: 3 }
+                }
+            });
+        });
+
+
+
+
+
+
+        /* =============================================================================
+        -------------------------------  Preloader and animation  -------------------------------
+        ============================================================================= */
+
+        // Always start at top
+        window.scrollTo(0, 0);
+        document.body.classList.add("loading");
+
+        const svg = document.getElementById("svg");
+        const tl = gsap.timeline();
+
+        const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
+        const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
+
+        // Animate loader text
+        tl.to(".loader-wrap-heading .load-text , .loader-wrap-heading .cont", {
+            delay: 1.5,
+            y: -100,
+            opacity: 0,
+        });
+
+        // Animate SVG wave
+        tl.to(svg, {
+            duration: 0.5,
+            attr: { d: curve },
+            ease: "power2.in",
+        }).to(svg, {
+            duration: 0.5,
+            attr: { d: flat },
+            ease: "power2.out",
+        });
+
+        // Move loader up and trigger AOS as soon as it’s gone
+        tl.to(".loader-wrap", {
+            y: -1500,
+            onComplete: () => {
+                // 🔥 Loader finished → allow scroll
+                document.body.classList.remove("loading");
+                document.body.classList.add("loaded");
+
+                // 🔥 Init AOS immediately
+                if (window.innerWidth > 768) {
+                    AOS.init({
+                        once: true,
+                    });
+
+                    // Refresh to force above-the-fold elements to show instantly
+                    AOS.refreshHard();
+                }
+            }
+        });
+
+        // Hide loader fully
+        tl.to(".loader-wrap", {
+            zIndex: -1,
+            display: "none",
+        });
+
+        // Animate header after loader
+        tl.from(
+            "header .container",
+            {
+                y: 100,
+                opacity: 0,
+                delay: 0.3,
+            },
+            "-=1.5"
+        );
+
+
+
+
+    </script>
+
+</body>
+
+</html>
