@@ -106,6 +106,7 @@
             animation-delay: 0.6s;
         }
 
+
         @-webkit-keyframes loading {
             0% {
                 opacity: 1;
@@ -219,18 +220,77 @@
             min-width: 182px;
         }
 
+        /* arrow animation setup */
+        .arrow-left {
+            transition: transform 0.5s linear;
+        }
+
+        /* move arrow when button hovered */
+        .btn-primary:hover .arrow-left {
+            transform: translateX(6px);
+        }
+
 
         .btn-dark {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             background: transparent;
-            border: 1px solid #DAC5A75C;
+            border-radius: 30px;
             padding: 9px 18px;
             font-size: 15px;
-            border-radius: 30px;
             font-weight: 600;
             color: #fff;
             text-decoration: none;
             min-width: 182px;
+            z-index: 1;
+            overflow: hidden;
+            border: 1px solid #DAC5A75C;
+            /* default subtle border */
         }
+
+        /* gradient border overlay */
+        .btn-dark::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 30px;
+            padding: 1px;
+            /* thin border */
+            background: linear-gradient(90deg,
+                    transparent,
+                    #DAC5A7,
+                    transparent);
+            background-size: 200% 100%;
+            mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        /* animate the gradient border */
+        .btn-dark:hover::before {
+            opacity: 1;
+            animation: borderFlow 2s linear infinite;
+        }
+
+        @keyframes borderFlow {
+            0% {
+                background-position: -200% 0;
+            }
+
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+
+
 
         .video-section {
             padding: 22px;
@@ -451,17 +511,17 @@
         .feature-card {
             background: #FFFFFF0A;
             border-radius: 32px;
-            transition: all 0.3s ease;
             border: 1px solid #FFFFFF42;
-            backdrop-filter: blur(26.200000762939453px);
+            backdrop-filter: blur(26.2px);
             padding: 35px 0;
+            transition: transform 0.4s ease, box-shadow 0.4s ease!important;
         }
 
         .feature-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-10px)!important;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-
         }
+
 
         .feature-card .icon img {
             width: 80px;

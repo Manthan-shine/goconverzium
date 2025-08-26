@@ -150,7 +150,7 @@
             <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap" data-aos="zoom-in-up"
                 data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="900">
                 <a href="#" class="btn-primary d-flex align-items-center gap-3"><img src="assets/img/arrow-left-btn.svg"
-                        alt="arrow-left-btn" class="img-fluid" width="32">Get Started Free</a>
+                        alt="arrow-left-btn" class="img-fluid arrow-left" width="32">Get Started Free</a>
                 <a href="#" class="btn-dark d-flex align-items-center justify-content-center">Book a Demo</a>
             </div>
         </div>
@@ -253,10 +253,12 @@
 
         <h2 data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="600"
             data-aos-offset="400">Go live in Just 3 Simple Steps</h2>
-        <p class="lead" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="500" data-aos-delay="600"
-            data-aos-offset="500">No coding, no complexity — just a fast, guided setup. <br>From training your AI to
-            going live,
-            it takes under 5 minutes.</p>
+        <div data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="500" data-aos-delay="600"
+            data-aos-offset="500">
+            <p class="lead">No coding, no complexity — just a fast, guided setup. <br>From training your AI to
+                going live,
+                it takes under 5 minutes.</p>
+        </div>
 
         <div class="row g-4">
             <!-- Step 1 -->
@@ -294,7 +296,7 @@
         <div class="d-flex justify-content-center flex-wrap gap-3 mt-4" data-aos="zoom-in-up"
             data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="700">
             <a href="#" class="btn-primary d-flex align-items-center gap-3"><img src="assets/img/arrow-left-btn.svg"
-                    alt="arrow-left-btn" class="img-fluid" width="32">Get Started Free</a>
+                    alt="arrow-left-btn" class="img-fluid arrow-left" width="32">Get Started Free</a>
             <a href="#" class="btn-dark d-flex align-items-center justify-content-center text-black border-dark">Book a
                 Demo</a>
         </div>
@@ -926,6 +928,9 @@
         ============================================================================= */
 
         // Always start at top
+        window.onbeforeunload = () => {
+            window.scrollTo(0, 0);
+        };
         window.scrollTo(0, 0);
         document.body.classList.add("loading");
 
@@ -937,31 +942,31 @@
 
         // Animate loader text
         tl.to(".loader-wrap-heading .load-text , .loader-wrap-heading .cont", {
-            delay: 1.5,
+            delay: 0.9,
             y: -100,
             opacity: 0,
         });
 
         // Animate SVG wave
         tl.to(svg, {
-            duration: 0.5,
+            duration: 0.3,
             attr: { d: curve },
             ease: "power2.in",
         }).to(svg, {
-            duration: 0.5,
+            duration: 0.3,
             attr: { d: flat },
             ease: "power2.out",
         });
 
         // Move loader up and trigger AOS as soon as it’s gone
         tl.to(".loader-wrap", {
-            y: -1500,
+            y: -1,
             onComplete: () => {
-                // 🔥 Loader finished → allow scroll
+                //  Loader finished → allow scroll
                 document.body.classList.remove("loading");
                 document.body.classList.add("loaded");
 
-                // 🔥 Init AOS immediately
+                //  Init AOS immediately
                 if (window.innerWidth > 768) {
                     AOS.init({
                         once: true,
@@ -975,7 +980,7 @@
 
         // Hide loader fully
         tl.to(".loader-wrap", {
-            zIndex: -1,
+            zIndex: -111,
             display: "none",
         });
 
@@ -983,11 +988,11 @@
         tl.from(
             "header .container",
             {
-                y: 100,
+                y: 10,
                 opacity: 0,
-                delay: 0.3,
+                delay: 5,
             },
-            "-=1.5"
+            "-=0.1"
         );
 
 
